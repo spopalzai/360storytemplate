@@ -1,0 +1,776 @@
+/*
+ * Name:        Theme
+ * Written by: 	WpAssembler - (http://wpassembler.io)
+ * Version:     1.0.0
+ */
+html, body {
+    height: 100%;
+}
+
+body {
+    color: #2F3034;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0;
+}
+
+a {
+    color: #2F3034;
+    transition: all 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: #333;
+    text-decoration: none;
+    outline: none !important;
+}
+
+li {
+    line-height: 22px;
+}
+
+p {
+    margin-bottom: 22px;
+}
+
+.font-primary {
+    font-family: "Roboto", sans-serif;
+}
+
+.font-secondary {
+    font-family: "Abril Fatface", cursive;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: "Abril Fatface", cursive;
+    font-weight: 400;
+    margin-top: 22px;
+    margin-bottom: 11px;
+}
+
+h1, .h1 {
+    font-size: 70px;
+    line-height: 70px;
+}
+
+h2, .h2 {
+    font-size: 56px;
+    line-height: 56px;
+}
+
+h3, .h3 {
+    font-size: 42px;
+    line-height: 42px;
+}
+
+h4, .h4 {
+    font-size: 35px;
+    line-height: 35px;
+}
+
+h5, .h5 {
+    font-size: 28px;
+    line-height: 28px;
+}
+
+h6, .h6 {
+    font-size: 21px;
+    line-height: 21px;
+}
+
+#wrapper {
+    height: 100%;
+    background: #222;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.no-scroll-with-padding {
+    overflow: hidden;
+    padding-right: 17px;
+}
+
+.tribune-logo-shadow {
+    background-image: url(../img/logo.png);
+    height: 97px;
+    width: 91px;
+    background-size: cover;
+    display: block;
+    font-size: 0;
+    text-indent: -9999px;
+}
+
+.tribune-logo {
+    background-image: url(../img/logo-black.jpg);
+    height: 56px;
+    width: 39px;
+    display: inline-block;
+    font-size: 0;
+    text-indent: -9999px;
+}
+
+.home-wrapper {
+    background: url(../img/home-bg.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+}
+
+.home-wrapper, .home-wrapper a {
+    color: #fff;
+}
+
+.home-wrapper .tribune-logo-shadow {
+    margin: 55px auto 11px;
+}
+
+.home-wrapper .page-title {
+    font-size: 154px;
+    line-height: 104.5px;
+    text-align: center;
+    margin: 0;
+}
+
+.home-wrapper .page-title span {
+    display: block;
+    font-size: 70px;
+}
+
+.home-wrapper .page-description,
+.home-wrapper .list-social-icons {
+    margin-top: 110px;
+    font-weight: 300;
+}
+
+.home-wrapper .page-description:before,
+.home-wrapper .list-social-icons:before {
+    content: " ";
+    height: 2px;
+    background: #fff;
+    width: 120px;
+    display: block;
+    margin-top: -22px;
+    margin-bottom: 33px;
+    margin-left: 0;
+}
+
+.home-wrapper .list-social-icons {
+    color: #fff;
+    float: right;
+}
+
+.home-wrapper .list-social-icons li {
+    margin-bottom: 22px;
+}
+
+.home-wrapper .list-social-icons a {
+    display: inline-block;
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    border: 1px solid #fff;
+    border-radius: 50em;
+    text-align: center;
+    font-size: 21px;
+    transition: all .5s ease-in;
+}
+
+.home-wrapper .list-social-icons a:hover {
+    background: #fff;
+    color: #666;
+    transform: rotateZ(720deg);
+}
+
+.home-wrapper .list-social-icons:before {
+    margin-left: auto;
+}
+
+.home-wrapper .btn-begin {
+    background-image: url(../img/btn-begin.png);
+    height: 124px;
+    width: 124px;
+    background-size: cover;
+    display: block;
+    font-size: 0;
+    text-indent: -9999px;
+    margin: auto;
+    position: absolute;
+    bottom: 44px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Sidebar - Responsive */
+@media (max-width: 768px) {
+    .home-wrapper .page-title {
+        font-size: 126px;
+        line-height: 93.5px;
+    }
+    .home-wrapper .page-title span {
+        font-size: 56px;
+    }
+}
+
+@media (max-width: 460px) {
+    .home-wrapper .tribune-logo-shadow {
+        margin-top: 22px;
+    }
+    .home-wrapper .page-title {
+        font-size: 42px;
+        line-height: 44px;
+    }
+    .home-wrapper .page-title span {
+        font-size: 28px;
+    }
+    .home-wrapper .page-description {
+        margin-top: 66px;
+    }
+    .home-wrapper .page-description:before {
+        display: none;
+    }
+    .home-wrapper .btn-begin {
+        height: 86px;
+        width: 86px;
+        bottom: 10px;
+    }
+    .home-wrapper .list-social-icons {
+        margin-top: 33px;
+        float: left;
+    }
+    .home-wrapper .list-social-icons li {
+        margin-bottom: 0;
+    }
+    .home-wrapper .list-social-icons a {
+        height: 33px;
+        width: 33px;
+        line-height: 33px;
+        font-size: 14px;
+    }
+    .home-wrapper .list-social-icons:before {
+        margin-left: 0;
+        margin-bottom: 22px;
+    }
+}
+
+.listing-wrapper {
+    background: #fff;
+    height: 100%;
+    display: none;
+    position: relative;
+}
+
+.listing-wrapper, .listing-wrapper a {
+    color: #161616;
+}
+
+.listing-wrapper header {
+    border-bottom: 7px solid #F7F7F7;
+    text-align: center;
+}
+
+.listing-wrapper header .btn-back-home {
+    float: left;
+    color: #cecece;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 77px;
+    border: solid #f7f7f7;
+    border-width: 0 1px;
+    padding: 0 28.6px;
+}
+
+.listing-wrapper header .tribune-logo {
+    margin-top: 11px;
+}
+
+.listing-wrapper header .list-social-icons {
+    float: right;
+    line-height: 77px;
+    border: solid #f7f7f7;
+    border-width: 0 1px;
+    margin: 0;
+}
+
+.listing-wrapper header .list-social-icons a {
+    color: #CECECE;
+    text-align: center;
+    font-size: 16.8px;
+    transition: color .5s ease-in;
+    padding: 0 11px;
+}
+
+.listing-wrapper header .list-social-icons a:hover {
+    color: #666;
+}
+
+.listing-wrapper .page-title {
+    text-align: center;
+}
+
+.listing-wrapper .page-title h1 {
+    font-size: 46.2px;
+    letter-spacing: 2px;
+}
+
+.listing-wrapper .page-title p {
+    font-weight: 300;
+    font-size: 18.2px;
+    width: 80%;
+    text-align: justify;
+    margin: 22px auto;
+}
+
+.listing-wrapper .page-title .text-muted {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.listing-wrapper .story-listing {
+    background: #F7F7F7;
+    padding-top: 44px;
+    padding-bottom: 44px;
+}
+
+.listing-wrapper .story-listing .story-item {
+    margin-bottom: 44px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.listing-wrapper .story-listing .story-item .img-container {
+    overflow: hidden;
+}
+
+.listing-wrapper .story-listing .story-item img {
+    width: 100%;
+    transition: transform 2s linear;
+}
+
+.listing-wrapper .story-listing .story-item h3 {
+    color: #2a2a2a;
+    font-size: 19.6px;
+    margin-top: 11px;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+.listing-wrapper .story-listing .story-item h3:after {
+    content: " ";
+    height: 1px;
+    background: #D4D4D4;
+    width: 60px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.listing-wrapper .story-listing .story-item p {
+    color: #a0a0a0;
+    font-size: 14px;
+    padding: 22px;
+}
+
+.listing-wrapper .story-listing .story-item:hover img {
+    transform: scale(1.2);
+}
+
+.listing-wrapper footer {
+    text-align: center;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    color: #a0a0a0;
+    font-size: 15px;
+}
+
+.listing-wrapper footer h6 {
+    color: #636363;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.listing-wrapper footer .credits {
+    font-weight: 700;
+}
+
+.listing-wrapper footer .credits span {
+    font-weight: 400;
+}
+
+.listing-wrapper footer .main-credits:after {
+    border-bottom: 1px solid #eee;
+    display: block;
+    content: " ";
+    width: 70%;
+    margin: auto;
+    padding-bottom: 11px;
+    margin-bottom: 11px;
+}
+
+.listing-wrapper footer .more-credits {
+    margin-left: -20px;
+}
+
+.listing-wrapper footer .more-credits span {
+    padding-left: 20px;
+}
+
+.wa-bounceIn {
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: waBounceIn;
+    animation-name: waBounceIn;
+    display: block;
+}
+
+@-webkit-keyframes waBounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(1.01);
+        transform: scale(1.01);
+    }
+    70% {
+        -webkit-transform: scale(0.99);
+        transform: scale(0.99);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes waBounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+        transform: scale(1.01);
+    }
+    70% {
+        -webkit-transform: scale(0.99);
+        -ms-transform: scale(0.99);
+        transform: scale(0.99);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+/* Sidebar - Responsive */
+@media (max-width: 460px) {
+    .listing-wrapper header .btn-back-home {
+        float: none;
+        border-width: 1px;
+        padding: 11px 20px;
+    }
+    .listing-wrapper header .tribune-logo {
+        margin-bottom: 22px;
+    }
+    .listing-wrapper .page-title h1 {
+        font-size: 25.2px;
+        line-height: 1.5;
+        letter-spacing: 1px;
+    }
+    .listing-wrapper .page-title p {
+        font-size: 16.8px;
+        width: 90%;
+    }
+    .listing-wrapper footer {
+        text-align: left;
+        line-height: 22px;
+        font-size: 13px;
+    }
+    .listing-wrapper footer .more-credits {
+        margin-left: 0;
+    }
+    .listing-wrapper footer .more-credits strong {
+        display: block;
+    }
+    .listing-wrapper footer .more-credits span {
+        padding-left: 0;
+    }
+}
+
+.story-wrapper {
+    background: no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.story-wrapper, .story-wrapper a {
+    color: #fff;
+}
+
+#audio-player {
+    display: none;
+}
+
+.story-meta {
+    position: fixed;
+    bottom: 11px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 11px 20px;
+    z-index: 2;
+}
+
+.story-meta h1 {
+    font-size: 28px;
+    margin-bottom: 26.4px;
+    margin-top: 11px;
+    line-height: 28px;
+}
+
+.story-meta .btn-read-more {
+    border: 1px solid #fff;
+    padding-left: 20px;
+    display: inline-block;
+    font-weight: 300;
+    font-size: 17.5px;
+    position: relative;
+    margin-bottom: 7px;
+}
+
+.story-meta .btn-read-more i {
+    border-left: 1px solid #fff;
+    line-height: 39.6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+}
+
+.story-meta .btn-read-more:hover i {
+    background: #fff;
+    color: #333;
+}
+
+.story-meta .list-social-icons, .story-meta .list-social-icons li {
+    margin: 0;
+    padding: 0;
+}
+
+.story-meta .list-social-icons a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    margin-top: 11px;
+    margin-right: 10px;
+}
+
+.thumbnails {
+    padding-left: 40px;
+    padding-top: 11px;
+}
+
+.thumbnails img {
+    width: 44px;
+    cursor: pointer;
+}
+
+.audio-player-toggle {
+    display: none;
+}
+
+.audio-player-toggle .fa {
+    display: none;
+    margin-right: 10px;
+    font-size: 21px;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.audio-player-toggle.is-playing .fa-pause {
+    display: block;
+}
+
+.audio-player-toggle.is-paused .fa-play {
+    display: block;
+}
+
+.has-audio .audio-player-toggle {
+    display: inline-block;
+}
+
+.story-video {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.story-video-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    z-index: 1;
+    display: none;
+}
+
+.story-video-icon img {
+    width: 128px;
+}
+
+.story-content:after {
+    content: " ";
+    border-top: 1px solid #D4D4D4;
+    border-bottom: 1px solid #D4D4D4;
+    padding-bottom: 2px;
+    width: 60%;
+    display: block;
+    margin: 22px auto;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    z-index: 3;
+}
+
+.popup, .popup a {
+    color: #2a2a2a;
+    font-size: 18px;
+    line-height: 30.8px;
+}
+
+.popup header h2:after {
+    content: " ";
+    height: 1px;
+    background: #D4D4D4;
+    width: 112px;
+    display: block;
+    margin: 22px auto;
+}
+
+.popup header p {
+    text-align: center;
+    margin-bottom: 33px;
+}
+
+.popup img {
+    max-width: 100%;
+    margin: 22px 0;
+    border: 10px solid #eee;
+}
+
+.popup p {
+    text-align: justify;
+    width: 75%;
+    margin: auto;
+}
+
+.popup-body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.92);
+    height: 100vh;
+}
+
+.popup-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.popup-body::-webkit-scrollbar-track {
+    width: 20px;
+    background: #aaa;
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.popup-body::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: #ccc;
+}
+
+.popup-body::-webkit-thumb:window-inactive {
+    background: #fff;
+}
+
+.popup .popup-close {
+    position: absolute;
+    top: 22px;
+    right: 44px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 24.5px;
+    height: 44px;
+    width: 44px;
+    line-height: 44px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .story-video-icon {
+        text-align: right;
+    }
+}
+
+@media (max-width: 460px) {
+    .story-video-icon {
+        text-align: right;
+        bottom: auto;
+    }
+    .story-video-icon img {
+        width: 72px;
+    }
+    .popup, .popup a {
+        font-size: 15px;
+        line-height: 26.4px;
+    }
+    .popup header h2 {
+        font-size: 35px;
+        line-height: 38.5px;
+    }
+    .popup header p {
+        text-align: center;
+        margin-bottom: 33px;
+    }
+    .popup .popup-close {
+        position: absolute;
+        top: 11px;
+        right: 22px;
+        font-size: 14px;
+        height: 22px;
+        width: 22px;
+        line-height: 22px;
+    }
+}

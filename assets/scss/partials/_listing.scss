@@ -1,0 +1,278 @@
+// main: ../theme.scss
+
+.listing-wrapper {
+	//@include position(fixed, 0);
+	background: #fff;
+	height: 100%;
+	display: none;
+
+	position: relative;
+
+	&, a {
+		color: #161616;
+	}
+
+	header {
+		border-bottom: 7px solid #F7F7F7;
+		text-align: center;
+
+		.btn-back-home {
+			float: left;
+			color: #cecece;
+			text-transform: uppercase;
+			font-weight: bold;
+			line-height: $line-height*3.5;
+			border: solid #f7f7f7;
+			border-width: 0 1px;
+			padding: 0 $line-height*1.3;
+		}
+
+		.tribune-logo {
+			margin-top: $line-height*.5;
+		}
+
+		.list-social-icons {
+			float: right;
+			line-height: $line-height*3.5;
+			border: solid #f7f7f7;
+			border-width: 0 1px;
+			margin: 0;
+
+			a {
+				color: #CECECE;
+				text-align: center;
+				font-size: $font-size*1.2;
+				transition: color .5s ease-in;
+				padding: 0 $line-height*.5;
+
+				&:hover {
+					color: #666;
+				}
+			}
+		}
+	}
+
+	.page-title {
+		text-align: center;
+
+		h1 {
+			font-size: $font-size*3.3;
+			letter-spacing: 2px;
+		}
+
+		p {
+			font-weight: 300;
+			font-size: $font-size*1.3;
+			width: 80%;
+			text-align: justify;
+			@include margin($line-height auto);
+		}
+
+		.text-muted {
+			font-style: italic;
+			font-size: $font-size*1;
+			line-height: 1.3;
+		}
+	}
+
+	.story-listing {
+		background: #F7F7F7;
+		@include padding($line-height*2 null);
+
+		.story-item {
+			margin-bottom: $line-height*2;
+			background: #fff;
+			text-align: center;
+			box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+			cursor: pointer;
+			-webkit-user-select: none;
+			user-select: none;
+
+			.img-container {
+				overflow: hidden;
+			}
+			img {
+				width: 100%;
+				transition: transform 2s linear;
+			}
+
+			h3 {
+				color: #2a2a2a;
+				font-size: $font-size*1.4;
+				margin-top: $line-height*.5;
+				font-family: $font-primary;
+				text-transform: uppercase;
+				font-weight: 900;
+				margin-bottom: 0;
+
+				&:after {
+					content: " ";
+					height: 1px;
+					background: #D4D4D4;
+					width: 60px;
+					display: block;
+					@include margin(null auto);
+				}
+			}
+
+			p {
+				color: #a0a0a0;
+				font-size: $font-size;
+				padding: $line-height;
+			}
+
+			&:hover img {
+				transform: scale(1.2);
+			}
+		}
+	}
+
+	footer {
+		text-align: center;
+		padding-top: $line-height*1.5;
+		padding-bottom: $line-height*1.5;
+		color: #a0a0a0;
+		font-size: 15px;
+
+		h6 {
+			color: #636363;
+			font-family: $font-primary;
+			text-transform: uppercase;
+			font-size: 15px;
+		}
+
+		.credits {
+			font-weight: 700;
+
+			span {
+				font-weight: 400;
+			}
+		}
+
+		.main-credits:after {
+			border-bottom: 1px solid #eee;
+			display: block;
+			content: " ";
+			width: 70%;
+			margin: auto;
+			padding-bottom: $line-height*.5;
+			margin-bottom: $line-height*.5;
+		}
+
+		.more-credits {
+			margin-left: -20px;
+			span {
+				padding-left: 20px;
+			}
+		}
+	}
+}
+
+
+.wa-bounceIn {
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: waBounceIn;
+    animation-name: waBounceIn;
+	display: block;
+}
+
+@-webkit-keyframes waBounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.9);
+        transform: scale(.9)
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(1.01);
+        transform: scale(1.01)
+    }
+    70% {
+        -webkit-transform: scale(.99);
+        transform: scale(.99)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@keyframes waBounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.9);
+        -ms-transform: scale(.9);
+        transform: scale(.9)
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+        transform: scale(1.01)
+    }
+    70% {
+        -webkit-transform: scale(.99);
+        -ms-transform: scale(.99);
+        transform: scale(.99)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+/* Sidebar - Responsive */
+@media (min-width: $grid-breakpoints-lg) { }
+@media (min-width: $grid-breakpoints-md) { }
+@media (max-width: $grid-breakpoints-xs) {
+	.listing-wrapper {
+		header {
+			.btn-back-home {
+				float: none;
+				border-width: 1px;
+				padding: $line-height*.5 20px;
+			}
+
+			.tribune-logo {
+				margin-bottom: $line-height;
+			}
+		}
+
+		.page-title {
+
+			h1 {
+				font-size: $font-size*1.8;
+				line-height: 1.5;
+				letter-spacing: 1px;
+			}
+
+			p {
+				font-size: $font-size*1.2;
+				width: 90%;
+			}
+		}
+
+		footer {
+
+			text-align: left;
+			line-height: $line-height*1;
+			font-size: 13px;
+
+			.more-credits {
+				margin-left: 0;
+
+				strong {
+					display: block;
+				}
+				span {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+// main: ../theme.scss
+
+.tribune-logo-shadow {
+	background-image: url(../img/logo.png);
+	@include size(91px,97px);
+	background-size: cover;
+	display: block;
+	font-size: 0;
+	text-indent: -9999px;
+}
+
+.tribune-logo {
+	background-image: url(../img/logo-black.jpg);
+	@include size(39px,56px);
+	display: inline-block;
+	font-size: 0;
+	text-indent: -9999px;
+}

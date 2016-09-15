@@ -1,0 +1,259 @@
+// main: ../theme.scss
+
+.story-wrapper {
+	//@include position(fixed, 0);
+	background: no-repeat center center;
+	background-size: cover;
+	height: 100%;
+	overflow: hidden;
+
+	position: relative;
+
+	&, a {
+		color:#fff;
+	}
+}
+#audio-player {
+	display: none;
+}
+.story-meta {
+	@include position(fixed, null null 11px 20px);
+	background: rgba(#000, 0.45);
+	padding: $line-height*.5 20px;
+	z-index: 2;
+
+	h1 {
+		font-size: $font-size*2;
+		margin-bottom: $line-height*1.2;
+		margin-top: $line-height*.5;
+		line-height: $font-size*2;
+	}
+
+	.btn-read-more {
+		border: 1px solid #fff;
+		padding-left: 20px;
+		display: inline-block;
+		font-weight: 300;
+		font-size: $font-size*1.25;
+		position: relative;
+		margin-bottom: 7px;
+
+		i {
+			border-left: 1px solid #fff;
+			line-height: $line-height*1.8;
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-left: 10px;
+		}
+
+		&:hover i {
+			background: #fff;
+			color: #333;
+		}
+	}
+
+	.list-social-icons {
+
+		&, li {
+			margin: 0;
+			padding: 0;
+		}
+
+		a {
+			display: inline-block;
+			padding: 5px 10px;
+			border: 1px solid #fff;
+			margin-top: 11px;
+			margin-right: 10px;
+		}
+	}
+}
+
+.thumbnails {
+	padding-left: 40px;
+	padding-top: $line-height*.5;
+	img {
+		width: 44px;
+		cursor: pointer;
+	}
+}
+
+.audio-player-toggle {
+	display: none;
+
+	.fa {
+		display: none;
+		margin-right: 10px;
+		font-size: $font-size*1.5;
+		width: 30px;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	&.is-playing .fa-pause {
+		display: block;
+	}
+
+	&.is-paused .fa-play {
+		display: block;
+	}
+}
+.has-audio {
+	.audio-player-toggle {
+		display: inline-block;
+	}
+}
+
+.story-video {
+	@include position(fixed, 0);
+	width: 100%;
+	height: 100%;
+}
+.story-video-icon {
+	@include position(absolute, null 0 0);
+	text-align: center;
+	z-index: 1;
+	display: none;
+
+	img {
+		width: 128px;
+	}
+}
+.story-content {
+	&:after {
+		content: " ";
+		border-top: 1px solid #D4D4D4;
+		border-bottom: 1px solid #D4D4D4;
+		padding-bottom: 2px;
+		width: 60%;
+		display: block;
+		@include margin($line-height auto);
+	}
+}
+
+.popup {
+	display: none;
+	@include position(fixed, 0);
+	text-align: center;
+	z-index: 3;
+
+	&, a {
+		color: #2a2a2a;
+		font-size: 18px;
+		line-height: $line-height*1.4;
+	}
+
+	header {
+		h2 {
+
+			&:after {
+				content: " ";
+				height: 1px;
+				background: #D4D4D4;
+				width: 112px;
+				display: block;
+				@include margin($line-height auto);
+			}
+		}
+
+		p {
+			text-align: center;
+			margin-bottom: $line-height*1.5;
+		}
+	}
+
+	img {
+		max-width: 100%;
+		margin: $line-height 0;
+		border: 10px solid #eee;
+	}
+
+	p {
+		text-align: justify;
+		width: 75%;
+		margin: auto;
+	}
+}
+.popup-body {
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	background: rgba(#fff,0.92);
+
+	height: 100vh;
+
+	&::-webkit-scrollbar {
+        width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        width: 20px;
+		background: #aaa;
+        box-shadow: inset 0 0 0 rgba(0,0,0,.3);
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 0;
+        background: #ccc;
+    }
+    &::-webkit-thumb:window-inactive {
+        background: #fff;
+    }
+}
+.popup .popup-close {
+	@include position(absolute, 22px 44px null null);
+	background: rgba(#000,0.7);
+	color:#fff;
+	font-size: $font-size*1.75;
+
+	@include size($line-height*2);
+	line-height: $line-height*2;
+
+	border-radius: 4px;
+
+	cursor: pointer;
+}
+
+@media (min-width: $grid-breakpoints-md) {
+	.story-video-icon {
+		text-align: right;
+	}
+}
+
+@media (max-width: $grid-breakpoints-xs) {
+	.story-video-icon {
+		text-align: right;
+		bottom: auto;
+
+		img {
+			width: 72px;
+		}
+	}
+
+	.popup {
+
+			&, a {
+				font-size: 15px;
+				line-height: $line-height*1.2;
+			}
+
+		header {
+			h2 {
+				font-size: $font-size*2.5;
+				line-height: $font-size*2.75;
+			}
+
+			p {
+				text-align: center;
+				margin-bottom: $line-height*1.5;
+			}
+		}
+
+		.popup-close {
+			@include position(absolute, 11px 22px null null);
+
+			font-size: $font-size*1;
+
+			@include size($line-height);
+			line-height: $line-height;
+		}
+	}
+}
